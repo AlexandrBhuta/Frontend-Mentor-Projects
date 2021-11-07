@@ -1,0 +1,471 @@
+@import '_variables';
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+@mixin flex($direction,
+$justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    &.active {
+        overflow: hidden;
+    }
+}
+
+.navigation-bar {
+    @include flex(row,
+    space-between);
+    margin: 20px;
+    .nav-links {
+        @include flex(column,
+        center);
+        position: absolute;
+        background: $veryDarkViolet;
+        top: 70px;
+        left: 0;
+        overflow: hidden;
+        height: 0;
+        width: 0;
+        transition: 0.3s;
+        background-image: url(/images/bg-pattern-mobile-nav.svg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center 100%;
+        background-size: 100% 200px;
+        &.active {
+            width: 100%;
+            height: 100%;
+            transition: 0.3s;
+        }
+        a {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: $fontBody;
+            font-weight: 700;
+            padding: 15px 0;
+            transform: translateY(-180px);
+            color: #fff;
+            &:last-of-type {
+                border: 2px solid #fff;
+                padding: 15px 30%;
+                margin-top: 20px;
+            }
+        }
+    }
+    .toggle {
+        cursor: pointer;
+        border: 2px solid $veryDarkViolet;
+        padding: 5px;
+        height: 28px;
+        div {
+            width: 15px;
+            height: 2px;
+            background: $veryDarkViolet;
+            &:not(:last-of-type) {
+                margin-bottom: 4px;
+            }
+        }
+        .top.active {
+            transform: translateY(6px) rotate(-45deg);
+        }
+        .mid.active {
+            display: none;
+        }
+        .bott.active {
+            transform: translateY(0) rotate(45deg);
+        }
+    }
+}
+
+.intro {
+    @include flex(column,
+    center);
+    text-align: center;
+    background-color: $darkViolet;
+    background-image: url(/images/image-intro-mobile.jpg), url(/images/bg-pattern-intro-left-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 450px, auto;
+    background-position: top center, 0 450px;
+    img {
+        display: none;
+    }
+    .text {
+        @include flex(column,
+        center);
+        margin-top: 550px;
+        padding-bottom: 100px;
+        color: #fff;
+         :first-child {
+            font-size: 50px;
+            font-family: $fontHead;
+        }
+         :nth-child(2) {
+            padding: 30px 40px;
+            line-height: 30px;
+            font-family: $fontBody;
+        }
+         :last-child {
+            text-transform: uppercase;
+            border: 2px solid #fff;
+            padding: 10px 30px;
+            cursor: pointer;
+            font-family: $fontBody;
+            &::after {
+                content: '';
+                position: absolute;
+                background-image: url(/images/bg-pattern-intro-right-mobile.svg);
+                width: 35%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: top right;
+                right: 0;
+            }
+            &:hover {
+                background: $veryLightGray;
+                color: $veryDarkViolet;
+            }
+        }
+    }
+}
+
+.about {
+    @include flex(column,
+    center);
+    padding: 150px 0;
+    .heading {
+        font-size: 45px;
+        font-weight: 700;
+        font-family: $fontHead;
+        color: $darkViolet;
+        &::before {
+            content: '';
+            position: absolute;
+            background: $darkGrayishViolet;
+            width: 40%;
+            height: 1px;
+            left: 30%;
+            transform: translateY(-30px);
+            opacity: 80%;
+        }
+    }
+    .icon-section {
+        margin-top: 40px;
+        .icons {
+            @include flex(column,
+            center);
+            text-align: center;
+            margin-top: 50px;
+            padding: 0 20px;
+             :nth-child(2) {
+                font-size: 30px;
+                font-weight: 700;
+                color: $veryDarkViolet;
+                padding: 20px 0;
+                text-transform: capitalize;
+            }
+             :last-child {
+                color: $darkGrayishViolet;
+                font-family: $fontBody;
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+.work {
+    @include flex(column,
+    center);
+    color: #fff;
+    padding-bottom: 100px;
+    .text {
+        @include flex(column,
+        center);
+        text-align: center;
+        background-color: $darkViolet;
+        padding: 60px 0;
+        width: 85vw;
+        background-image: url(/images/bg-pattern-how-we-work-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+         :first-child {
+            font-size: 45px;
+            line-height: 45px;
+            font-family: $fontHead;
+        }
+         :last-child {
+            text-transform: uppercase;
+            border: 2px solid #fff;
+            padding: 10px 30px;
+            margin-top: 25px;
+            height: 45px;
+            font-family: $fontBody;
+            cursor: pointer;
+            white-space: nowrap;
+            &:hover {
+                background: $veryLightGray;
+                color: $veryDarkViolet;
+            }
+        }
+    }
+}
+
+.footer {
+    background: $veryLightGray;
+    padding: 80px 0;
+    background-image: url(/images/bg-pattern-footer-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 160px;
+    .links {
+        margin-top: 20px;
+    }
+    @include flex(column,
+    center);
+    .header {
+        @include flex(column,
+        center);
+        gap: 30px;
+        .social-icons {
+            i {
+                margin: 0 5px;
+                font-size: 30px;
+                color: $darkGrayishViolet;
+                cursor: pointer;
+                &:hover {
+                    color: $veryDarkViolet;
+                }
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            background: $darkGrayishViolet;
+            opacity: 20%;
+            width: 90%;
+            height: 1px;
+            margin-top: 150px;
+        }
+    }
+    .footer-links {
+        @include flex(column,
+        center);
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 30px;
+        font-family: $fontBody;
+        font-weight: 700;
+        .heading {
+            color: $darkGrayishViolet;
+            padding: 20px;
+        }
+         :last-child {
+            @include flex(column,
+            center);
+        }
+        div>a {
+            text-decoration: none;
+            color: $darkViolet;
+            line-height: 30px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.attribution {
+    font-size: 14px;
+    font-family: $fontBody;
+    text-align: center;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+@media (min-width:760px) {
+    .navigation-bar {
+        margin: 0;
+        height: 70px;
+        padding: 5px 6%;
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url(/images/bg-pattern-intro-right-desktop.svg);
+            width: 35%;
+            height: 80%;
+            background-repeat: no-repeat;
+            background-position: top right;
+            top: 70px;
+            right: 0;
+        }
+        .nav-links {
+            @include flex(row,
+            center);
+            position: relative;
+            overflow: visible;
+            top: 0;
+            left: -245px;
+            height: 0;
+            background-image: none;
+            gap: 30px;
+            a {
+                transform: translateY(0);
+                color: $darkGrayishViolet;
+                white-space: nowrap;
+                &:hover {
+                    color: $veryDarkViolet;
+                }
+                &:last-of-type {
+                    border: 2px solid $darkViolet;
+                    padding: 10px 20px;
+                    margin: 0;
+                    color: $darkViolet;
+                    &:hover {
+                        background: $veryDarkViolet;
+                        color: $veryLightGray;
+                    }
+                }
+            }
+        }
+        .toggle {
+            display: none;
+        }
+    }
+    .intro {
+        @include flex(row-reverse,
+        space-between);
+        background-image: none;
+        padding: 0 6%;
+        height: 600px;
+        img {
+            display: block;
+            margin-top: 15%;
+            width: 35vw;
+            min-height: 400px;
+            min-width: 350px;
+        }
+        .text {
+            margin-top: 180px;
+            text-align: left;
+            align-items: flex-start;
+            max-width: 550px;
+             :first-child {
+                font-size: 60px;
+                line-height: 50px;
+                max-width: 450px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background: $grayishBlue;
+                    width: 150px;
+                    height: 1px;
+                    margin-top: -80px;
+                }
+            }
+             :nth-child(2) {
+                padding: 30px 0;
+                line-height: 30px;
+            }
+             :last-child {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-image: url(/images/bg-pattern-intro-left-desktop.svg);
+                    width: 35%;
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-position: top right;
+                    left: -22%;
+                }
+            }
+        }
+    }
+    .about {
+        align-items: flex-start;
+        padding: 150px 6%;
+        margin-top: 200px;
+        .heading {
+            font-size: 60px;
+            margin-left: 20px;
+            &::before {
+                width: 130px;
+                height: 1px;
+                left: 8%;
+                transform: translateY(-50px);
+                opacity: 40%;
+            }
+        }
+        .icon-section {
+            @include flex(row,
+            center);
+            align-items: flex-start;
+            .icons {
+                text-align: left;
+                align-items: flex-start;
+            }
+        }
+    }
+    .work {
+        .text {
+            @include flex(row,
+            space-between);
+            text-align: left;
+            padding: 60px 5%;
+            width: 85vw;
+            background-image: url(/images/bg-pattern-how-we-work-desktop.svg);
+             :first-child {
+                font-size: 45px;
+                line-height: 45px;
+                max-width: 395px;
+            }
+        }
+    }
+    .footer {
+        padding: 80px 8%;
+        margin-top: 40px;
+        background-image: url(/images/bg-pattern-footer-desktop.svg);
+        background-size: auto;
+        background-position: top left;
+        .header {
+            @include flex(row,
+            space-between);
+            width: 100%;
+            &::after {
+                width: 84%;
+                margin-top: 90px;
+            }
+        }
+        .footer-links {
+            @include flex(row,
+            space-between);
+            align-items: flex-start;
+            margin-top: 30px;
+            width: 100%;
+            .heading {
+                padding: 20px;
+                margin-left: -20px
+            }
+            .heading-2 {
+                margin-left: -60px;
+            }
+             :last-child {
+                @include flex(column,
+                flex-start);
+            }
+            div>a {
+                align-self: flex-start;
+            }
+        }
+    }
+}

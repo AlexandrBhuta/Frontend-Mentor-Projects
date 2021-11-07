@@ -1,0 +1,144 @@
+@import '_variables';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    background-image: url(/images/bg-mobile.png);
+    background-color: $veryDarkBlue;
+    background-repeat: no-repeat;
+    color: #fff;
+    margin-top: 100px;
+}
+
+.icon-container {
+    display: grid;
+    background: $darkBlue;
+    padding: 30px 0 30px 30px;
+    border-radius: 10px 100px 10px 10px;
+    gap: 40px;
+    max-width: 250vw;
+    min-width: 200px;
+    .icons {
+        display: flex;
+        justify-content: space-between;
+        max-width: 170px;
+        width: 190px;
+        gap: 5px;
+        img {
+            background: $veryDarkBlue;
+            border-radius: 10px;
+            padding: 14px 14px;
+            &:first-of-type {
+                padding: 12px 14px;
+            }
+            &:last-of-type {
+                padding: 16px 14px;
+            }
+        }
+    }
+}
+
+.storage-container {
+    margin-top: 20px;
+    background: $darkBlue;
+    border-radius: 10px;
+    padding: 30px 30px 50px 30px;
+    max-width: 53vw;
+    min-width: 200px;
+    color: $paleBlue;
+     :first-child {
+        font-size: 12px;
+    }
+    .progress-bar {
+        width: 70%;
+        height: 15px;
+        background: linear-gradient(90deg, $gradientFrom, $gradeintTo);
+        border-radius: 50px;
+        margin: 20px 0 10px 0;
+        box-shadow: 0 0 0 2px $veryDarkBlue, 60px 0 0 2px $veryDarkBlue;
+        &::after {
+            content: '';
+            position: absolute;
+            background: $paleBlue;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 2px 125px;
+        }
+    }
+    .gb {
+        display: flex;
+        justify-content: space-between;
+    }
+    .gb-left {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        color: $veryDarkBlue;
+        padding: 10px 15px;
+        border-radius: 10px;
+        gap: 10px;
+        width: 150px;
+        margin: 15px 10px;
+         :first-child {
+            font-size: 40px;
+            font-weight: 700;
+        }
+         :last-child {
+            color: $grayishBlue;
+            font-weight: 700;
+        }
+    }
+}
+
+@media (min-width: 376px) {
+    body {
+        background-image: url(/images/bg-desktop.png);
+        background-position: 0 450px;
+    }
+}
+
+@media (min-width: 810px) {
+    body {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 380px;
+    }
+    .icon-container {
+        width: 280px;
+        min-width: 190px;
+        margin-top: -30px;
+    }
+    .storage-container {
+        padding: 30px;
+        width: 400px;
+        .progress-bar {
+            width: 85%;
+            &::after {
+                margin: 2px 325px;
+            }
+        }
+        .gb-left {
+            padding: 15px 20px;
+            width: 120px;
+            margin: -145px 230px;
+             :first-child {
+                font-size: 30px;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                border-right: 20px solid #fff;
+                border-left: 30px solid transparent;
+                border-bottom: 30px solid transparent;
+                transform: translate(55px, 40px);
+            }
+        }
+    }
+}

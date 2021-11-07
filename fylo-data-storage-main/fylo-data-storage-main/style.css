@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+body {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  background-image: url(/images/bg-mobile.png);
+  background-color: #0c122c;
+  background-repeat: no-repeat;
+  color: #fff;
+  margin-top: 100px;
+}
+
+.icon-container {
+  display: -ms-grid;
+  display: grid;
+  background: #1d2c67;
+  padding: 30px 0 30px 30px;
+  border-radius: 10px 100px 10px 10px;
+  gap: 40px;
+  max-width: 250vw;
+  min-width: 200px;
+}
+
+.icon-container .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 170px;
+  width: 190px;
+  gap: 5px;
+}
+
+.icon-container .icons img {
+  background: #0c122c;
+  border-radius: 10px;
+  padding: 14px 14px;
+}
+
+.icon-container .icons img:first-of-type {
+  padding: 12px 14px;
+}
+
+.icon-container .icons img:last-of-type {
+  padding: 16px 14px;
+}
+
+.storage-container {
+  margin-top: 20px;
+  background: #1d2c67;
+  border-radius: 10px;
+  padding: 30px 30px 50px 30px;
+  max-width: 53vw;
+  min-width: 200px;
+  color: #dddbff;
+}
+
+.storage-container :first-child {
+  font-size: 12px;
+}
+
+.storage-container .progress-bar {
+  width: 70%;
+  height: 15px;
+  background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background: linear-gradient(90deg, #ffa399, #ff4d97);
+  border-radius: 50px;
+  margin: 20px 0 10px 0;
+  -webkit-box-shadow: 0 0 0 2px #0c122c, 60px 0 0 2px #0c122c;
+          box-shadow: 0 0 0 2px #0c122c, 60px 0 0 2px #0c122c;
+}
+
+.storage-container .progress-bar::after {
+  content: '';
+  position: absolute;
+  background: #dddbff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 2px 125px;
+}
+
+.storage-container .gb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.storage-container .gb-left {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  color: #0c122c;
+  padding: 10px 15px;
+  border-radius: 10px;
+  gap: 10px;
+  width: 150px;
+  margin: 15px 10px;
+}
+
+.storage-container .gb-left :first-child {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.storage-container .gb-left :last-child {
+  color: #848794;
+  font-weight: 700;
+}
+
+@media (min-width: 376px) {
+  body {
+    background-image: url(/images/bg-desktop.png);
+    background-position: 0 450px;
+  }
+}
+
+@media (min-width: 810px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 20px;
+    margin-top: 380px;
+  }
+  .icon-container {
+    width: 280px;
+    min-width: 190px;
+    margin-top: -30px;
+  }
+  .storage-container {
+    padding: 30px;
+    width: 400px;
+  }
+  .storage-container .progress-bar {
+    width: 85%;
+  }
+  .storage-container .progress-bar::after {
+    margin: 2px 325px;
+  }
+  .storage-container .gb-left {
+    padding: 15px 20px;
+    width: 120px;
+    margin: -145px 230px;
+  }
+  .storage-container .gb-left :first-child {
+    font-size: 30px;
+  }
+  .storage-container .gb-left::after {
+    content: '';
+    position: absolute;
+    border-right: 20px solid #fff;
+    border-left: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    -webkit-transform: translate(55px, 40px);
+            transform: translate(55px, 40px);
+  }
+}
+/*# sourceMappingURL=style.css.map */

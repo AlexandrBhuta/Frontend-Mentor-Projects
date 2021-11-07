@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 18px;
+  background-image: url(/images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.history, .history-track, .access, .supercharge, .logos, .clipboard, footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.history .logo-img, .history-track .logo-img, .access .logo-img, .supercharge .logo-img, .logos .logo-img, .clipboard .logo-img, footer .logo-img {
+  -webkit-animation: pulse;
+          animation: pulse;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.history h1, .history-track h1, .access h1, .supercharge h1, .logos h1, .clipboard h1, footer h1 {
+  color: #4c545d;
+  font-size: 35px;
+  padding-top: 50px;
+}
+
+.history p, .history-track p, .access p, .supercharge p, .logos p, .clipboard p, footer p {
+  color: #9fabb2;
+  margin: 20px 0 50px 0;
+  line-height: 30px;
+  padding: 0 15px;
+}
+
+.history .buttons, .history-track .buttons, .access .buttons, .supercharge .buttons, .logos .buttons, .clipboard .buttons, footer .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.history .buttons button, .history-track .buttons button, .access .buttons button, .supercharge .buttons button, .logos .buttons button, .clipboard .buttons button, footer .buttons button {
+  border: none;
+  padding: 20px 100px;
+  border-radius: 50px;
+  color: #fff;
+  background: #26baa4;
+  font-size: 18px;
+  -webkit-box-shadow: 0 3px 0 0 #1e9482;
+          box-shadow: 0 3px 0 0 #1e9482;
+  cursor: pointer;
+}
+
+.history .buttons button:hover, .history-track .buttons button:hover, .access .buttons button:hover, .supercharge .buttons button:hover, .logos .buttons button:hover, .clipboard .buttons button:hover, footer .buttons button:hover {
+  opacity: 70%;
+  -webkit-animation-name: jello;
+          animation-name: jello;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.history .buttons :last-child, .history-track .buttons :last-child, .access .buttons :last-child, .supercharge .buttons :last-child, .logos .buttons :last-child, .clipboard .buttons :last-child, footer .buttons :last-child {
+  background: #6173ff;
+  -webkit-box-shadow: 0 3px 0 0 #334bff;
+          box-shadow: 0 3px 0 0 #334bff;
+}
+
+.history-track h1 {
+  color: #4c545d;
+  font-size: 35px;
+}
+
+.history-track p {
+  padding: 0 15px;
+}
+
+.history-track .history-info div > img {
+  width: 80vw;
+}
+
+.history-track .history-info .info {
+  padding-top: 50px;
+}
+
+.history-track .history-info .info h2 {
+  color: #4c545d;
+}
+
+.access img {
+  width: 90vw;
+}
+
+.supercharge div {
+  padding-top: 20px;
+}
+
+.supercharge div .tools img {
+  padding-bottom: 40px;
+}
+
+.supercharge div .tools h2 {
+  color: #4c545d;
+}
+
+.logos {
+  gap: 50px;
+  padding-top: 100px;
+}
+
+.clipboard {
+  padding-bottom: 200px;
+}
+
+footer {
+  background: rgba(159, 171, 178, 0.05);
+}
+
+footer img {
+  width: 80px;
+  padding-bottom: 40px;
+  margin-top: -30px;
+}
+
+footer .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .links a {
+  text-decoration: none;
+  padding: 20px 0;
+  color: #4c545d;
+}
+
+footer .links a:hover {
+  color: #26baa4;
+}
+
+footer .social-icons i {
+  font-size: 30px;
+  color: #4c545d;
+  padding: 50px 20px;
+  cursor: pointer;
+}
+
+footer .social-icons i:hover {
+  color: #26baa4;
+  -webkit-animation-name: jello;
+          animation-name: jello;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #26baa4;
+}
+
+@media (min-width: 375px) {
+  body {
+    background-image: url(/images/bg-header-desktop.png);
+  }
+}
+
+@media (min-width: 820px) {
+  .history p, .history-track p, .access p, .supercharge p, .logos p, .clipboard p, footer p {
+    max-width: 650px;
+  }
+  .history .buttons, .history-track .buttons, .access .buttons, .supercharge .buttons, .logos .buttons, .clipboard .buttons, footer .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .history .buttons button, .history-track .buttons button, .access .buttons button, .supercharge .buttons button, .logos .buttons button, .clipboard .buttons button, footer .buttons button {
+    padding: 20px 50px;
+  }
+  .history-track {
+    overflow: hidden;
+  }
+  .history-track p {
+    max-width: 720px;
+  }
+  .history-track .history-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  .history-track .history-info div > img {
+    width: 100%;
+    -webkit-transform: translate(-10%, 30px);
+            transform: translate(-10%, 30px);
+    position: relative;
+  }
+  .history-track .history-info .info p {
+    max-width: 420px;
+  }
+  .access img {
+    max-width: 800px;
+  }
+  .supercharge div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .supercharge div .tools {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .supercharge div .tools p {
+    max-width: 420px;
+  }
+  .logos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 200px 200px 200px;
+        grid-template-columns: 200px 200px 200px;
+    -ms-grid-rows: 100px 100px;
+        grid-template-rows: 100px 100px;
+  }
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 100px;
+  }
+  footer img {
+    padding: 0;
+    margin: 0;
+  }
+  footer .links {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 150px 150px 150px;
+        grid-template-columns: 150px 150px 150px;
+    -ms-grid-rows: 50px 50px;
+        grid-template-rows: 50px 50px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1000px) {
+  .logos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/*# sourceMappingURL=style.css.map */
