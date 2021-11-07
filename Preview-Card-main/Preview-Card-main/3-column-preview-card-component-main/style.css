@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: hsl(0, 0%, 95%);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+#cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  height: 550px;
+  border-radius: 5px;
+  width: 1000px;
+  margin: 50px;
+}
+
+.card {
+  width: 280px;
+  height: 450px;
+}
+
+#left {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 5px 0 0 5px;
+}
+
+#middle {
+  background: hsl(184, 100%, 22%);
+}
+
+#right {
+  background: hsl(179, 100%, 13%);
+  border-radius: 0 5px 5px 0;
+}
+
+button {
+  border: none;
+  border-radius: 50px;
+  background: hsl(0, 0%, 95%);
+  margin-top: 50px;
+  margin-left: -80px;
+  height: 40px;
+  width: 115px;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+}
+
+.btn1 {
+  color: hsl(31, 77%, 52%);
+}
+
+.btn2 {
+  color: hsl(184, 100%, 22%);
+}
+
+.btn3 {
+  color: hsl(179, 100%, 13%);
+}
+
+svg {
+  margin-top: 40px;
+  margin-left: -140px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 40px;
+  margin-top: 30px;
+  color: hsl(0, 0%, 95%);
+  font-family: "Big Shoulders Display", cursive;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-left: 40px;
+  margin-top: 30px;
+  line-height: 25px;
+  width: 200px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+}
+
+.attribution {
+  display: block;
+  color: #000000;
+}
+
+@media (max-width: 800px) {
+  #cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: none;
+    border-radius: 5px;
+    margin-top: 300px;
+  }
+  .card {
+    width: 220px;
+    height: 330px;
+  }
+
+  #left {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 5px 5px 0 0;
+  }
+
+  #middle {
+    background: hsl(184, 100%, 22%);
+  }
+
+  #right {
+    background: hsl(179, 100%, 13%);
+    border-radius: 0 0 5px 5px;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 40px;
+    margin-top: 15px;
+    color: hsl(0, 0%, 95%);
+    font-family: "Big Shoulders Display", sans-serif;
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-left: 40px;
+    margin-top: 10px;
+    line-height: 20px;
+    width: 160px;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 12px;
+  }
+  button {
+    border-radius: 50px;
+    background: hsl(0, 0%, 95%);
+    margin: 10px 30px 30px 0;
+    height: 35px;
+    width: 115px;
+    cursor: pointer;
+  }
+  svg {
+    margin-top: 30px;
+    margin-left: -90px;
+  }
+  .attribution {
+    color: #000000;
+    margin-top: 250px;
+  }
+}
