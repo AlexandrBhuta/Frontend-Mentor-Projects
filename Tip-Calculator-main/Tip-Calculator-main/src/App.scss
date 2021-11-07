@@ -1,0 +1,232 @@
+@import '_variables';
+body {
+    background: $lightGrayishCyan1;
+    font-family: 'Space Mono', monospace;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    border-radius: 20px;
+    padding-bottom: 30px;
+    .input-section {
+        .bill-section,
+        .people {
+            h1 {
+                font-size: 18px;
+                margin: 20px 0;
+                color: $darkGrayishCyan1;
+                transform: translateY(15px);
+            }
+            input {
+                border: none;
+                outline: none;
+                text-align: right;
+                border-radius: 5px;
+                background: $lightGrayishCyan2 url(/src/images/icon-dollar.svg) no-repeat center left 20px;
+                padding: 7px 15px;
+                width: 70vw;
+                cursor: pointer;
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+                &::placeholder {
+                    font-family: 'Space Mono', monospace;
+                    font-size: 24px;
+                }
+                &[value] {
+                    font-family: 'Space Mono', monospace;
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: $veryDarkCyan
+                }
+            }
+        }
+        .people {
+            input {
+                background: $lightGrayishCyan2 url(/src/images/icon-person.svg) no-repeat center left 20px;
+            }
+        }
+        .select-tip {
+            h1 {
+                font-size: 18px;
+                color: $darkGrayishCyan1;
+                text-transform: capitalize;
+                transform: translateY(5px);
+            }
+            .percentages {
+                display: grid;
+                grid-template-columns: 35vw 35vw;
+                grid-template-rows: 50px 50px 50px;
+                gap: 20px;
+                flex-wrap: nowrap;
+                button {
+                    border: none;
+                    outline: none;
+                    font-family: 'Space Mono', monospace;
+                    font-size: 24px;
+                    background: $veryDarkCyan;
+                    color: $white;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-weight: 700;
+                    &.active {
+                        background: $strongCyan;
+                        color: $veryDarkCyan;
+                    }
+                }
+                input {
+                    border: none;
+                    outline: none;
+                    text-align: center;
+                    border-radius: 5px;
+                    background: $lightGrayishCyan2;
+                    padding: 0 15px;
+                    cursor: pointer;
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                    }
+                    &::placeholder {
+                        font-family: 'Space Mono', monospace;
+                        font-size: 24px;
+                    }
+                    &[value] {
+                        font-family: 'Space Mono', monospace;
+                        font-size: 24px;
+                        font-weight: 700;
+                        color: $veryDarkCyan;
+                    }
+                }
+            }
+        }
+    }
+    .output-section {
+        background: $veryDarkCyan;
+        width: 70vw;
+        border-radius: 10px;
+        margin-top: 40px;
+        padding: 20px;
+        div {
+            display: flex;
+            justify-content: space-between;
+            .heading {
+                display: flex;
+                flex-direction: column;
+                margin: 10px 0;
+                h1 {
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    color: $lightGrayishCyan1;
+                }
+                p {
+                    font-size: 14px;
+                    color: $darkGrayishCyan2;
+                    margin-top: -10px;
+                }
+            }
+            .price {
+                color: $strongCyan;
+                font-size: 34px;
+                font-weight: 700;
+                overflow: scroll;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+        }
+        button {
+            border: none;
+            outline: none;
+            font-family: 'Space Mono', monospace;
+            font-size: 24px;
+            font-weight: 700;
+            background: $strongCyan;
+            color: $veryDarkCyan;
+            border-radius: 5px;
+            padding: 5px 20px;
+            width: 70vw;
+            margin-top: 20px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (min-width:900px) {
+    header {
+        margin: 70px;
+    }
+    main {
+        flex-direction: row;
+        padding: 0 100px;
+        min-width: 680px;
+        margin-left: 50%;
+        transform: translate(-50%);
+        padding-bottom: 40px;
+        .input-section {
+            .bill-section,
+            .people {
+                input {
+                    max-width: 360px;
+                    &:hover {
+                        box-shadow: 0 0 0 3px $strongCyan;
+                    }
+                }
+            }
+            .select-tip {
+                .percentages {
+                    display: flex;
+                    flex-wrap: wrap;
+                    max-width: 400px;
+                    button {
+                        width: 115px;
+                        padding: 7px 20px;
+                        &:hover {
+                            background: $strongCyan;
+                            color: $veryDarkCyan;
+                        }
+                    }
+                    input {
+                        max-width: 74px;
+                        padding: 7px 20px;
+                        &:hover {
+                            box-shadow: 0 0 0 3px $strongCyan;
+                        }
+                    }
+                }
+            }
+        }
+        .output-section {
+            max-width: 350px;
+            height: 300px;
+            margin-left: 40px;
+            padding: 40px;
+            div {
+                .price {
+                    font-size: 45px;
+                    max-width: 200px;
+                }
+            }
+            button {
+                max-width: 300px;
+                transform: translate(0, 55px);
+                padding: 5px 0;
+                &:hover {
+                    background: $lightGrayishCyan1;
+                }
+            }
+        }
+    }
+}

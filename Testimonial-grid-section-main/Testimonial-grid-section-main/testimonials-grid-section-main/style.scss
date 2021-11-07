@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+@import '_variables';
+@mixin flex($justify,
+$align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    background: $lightGrayishBlue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.testimonials {
+    section {
+        padding: 30px;
+        margin: 30px 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 10px $lightGrayishBlue;
+        .content {
+            header {
+                @include flex(flex-start,
+                center);
+                gap: 15px;
+                img {
+                    border: 2px solid $white;
+                    border-radius: 50%;
+                    width: 30px;
+                }
+                .creds {
+                    color: $white;
+                    display: grid;
+                    gap: 3px;
+                     :first-child {
+                        font-size: 14px;
+                    }
+                     :last-child {
+                        opacity: 50%;
+                        font-size: 12px;
+                    }
+                }
+            }
+            .info {
+                h1 {
+                    font-weight: 600;
+                    font-size: 20px;
+                    padding-top: 10px;
+                    color: $white;
+                }
+                p {
+                    opacity: 50%;
+                    color: $white;
+                    line-height: 20px;
+                    font-size: 13px;
+                }
+            }
+        }
+        &:first-of-type {
+            background: $moderateViolet url(/images/bg-pattern-quotation.svg) no-repeat top right 10%;
+        }
+        &:nth-of-type(2) {
+            background: $veryDarkGrayishBlue;
+        }
+        &:nth-of-type(3),
+        &:last-of-type {
+            background: $white;
+            header {
+                .creds {
+                    color: $VeryDarkBlackishBlue;
+                }
+            }
+            .info {
+                h1 {
+                    color: $VeryDarkBlackishBlue;
+                }
+                p {
+                    color: $veryDarkGrayishBlue;
+                }
+            }
+        }
+        &:nth-of-type(4) {
+            background: $VeryDarkBlackishBlue;
+            header {
+                img {
+                    border: 2px solid $moderateViolet;
+                }
+            }
+        }
+        &:last-of-type {
+            background: $white;
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    body {
+        @include flex(center,
+        center);
+        flex-direction: column;
+    }
+    .testimonials {
+        display: grid;
+        gap: 0;
+        section {
+            margin: 15px;
+            &:first-of-type {
+                grid-column: 1 / 3;
+                @media (min-width: $breakPoint1) {
+                    grid-column: 1 / 2;
+                    grid-row: 1 / 3;
+                }
+                @media (min-width: $breakPoint2) {
+                    grid-column: 1 / 3;
+                    grid-row: 1;
+                    width: 500px;
+                }
+            }
+            &:nth-of-type(2) {
+                grid-column: 1 / 2;
+                @media (min-width: $breakPoint1) {
+                    grid-column: 2 / 4;
+                }
+                @media (min-width: $breakPoint2) {
+                    grid-column: 3 / 4;
+                    width: 200px;
+                }
+            }
+            &:nth-of-type(3) {
+                grid-column: 2 / 2;
+                @media (min-width: $breakPoint1) {
+                    grid-column: 2 / 4;
+                }
+                @media (min-width: $breakPoint2) {
+                    grid-column: 1 / 2;
+                    width: 200px;
+                }
+            }
+            &:nth-of-type(4) {
+                grid-column: 1 / 3;
+                @media (min-width: $breakPoint1) {
+                    grid-column: 1 / 5;
+                }
+                @media (min-width: $breakPoint2) {
+                    grid-column: 2 / 4;
+                    width: 500px;
+                }
+            }
+            &:last-of-type {
+                grid-column: 1 / 3;
+                @media (min-width: $breakPoint1) {
+                    grid-column: 4;
+                    grid-row: 1 / 3;
+                }
+                @media (min-width: $breakPoint2) {
+                    grid-column: 4;
+                    grid-row: 1 / 3;
+                    width: 200px;
+                }
+            }
+        }
+    }
+}

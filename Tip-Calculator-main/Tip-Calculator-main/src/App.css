@@ -1,0 +1,315 @@
+body {
+  background: #c5e4e7;
+  font-family: 'Space Mono', monospace;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px 0;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  border-radius: 20px;
+  padding-bottom: 30px;
+}
+
+main .input-section .bill-section h1,
+main .input-section .people h1 {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #5e7a7d;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+}
+
+main .input-section .bill-section input,
+main .input-section .people input {
+  border: none;
+  outline: none;
+  text-align: right;
+  border-radius: 5px;
+  background: #f4fafa url(/src/images/icon-dollar.svg) no-repeat center left 20px;
+  padding: 7px 15px;
+  width: 70vw;
+  cursor: pointer;
+}
+
+main .input-section .bill-section input::-webkit-outer-spin-button, main .input-section .bill-section input::-webkit-inner-spin-button,
+main .input-section .people input::-webkit-outer-spin-button,
+main .input-section .people input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+main .input-section .bill-section input::-webkit-input-placeholder,
+main .input-section .people input::-webkit-input-placeholder {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+}
+
+main .input-section .bill-section input:-ms-input-placeholder,
+main .input-section .people input:-ms-input-placeholder {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+}
+
+main .input-section .bill-section input::-ms-input-placeholder,
+main .input-section .people input::-ms-input-placeholder {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+}
+
+main .input-section .bill-section input::placeholder,
+main .input-section .people input::placeholder {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+}
+
+main .input-section .bill-section input[value],
+main .input-section .people input[value] {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  color: #00494d;
+}
+
+main .input-section .people input {
+  background: #f4fafa url(/src/images/icon-person.svg) no-repeat center left 20px;
+}
+
+main .input-section .select-tip h1 {
+  font-size: 18px;
+  color: #5e7a7d;
+  text-transform: capitalize;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+main .input-section .select-tip .percentages {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35vw 35vw;
+      grid-template-columns: 35vw 35vw;
+  -ms-grid-rows: 50px 50px 50px;
+      grid-template-rows: 50px 50px 50px;
+  gap: 20px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+main .input-section .select-tip .percentages button {
+  border: none;
+  outline: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  background: #00494d;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+main .input-section .select-tip .percentages button.active {
+  background: #26c0ab;
+  color: #00494d;
+}
+
+main .input-section .select-tip .percentages input {
+  border: none;
+  outline: none;
+  text-align: center;
+  border-radius: 5px;
+  background: #f4fafa;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+main .input-section .select-tip .percentages input::-webkit-outer-spin-button, main .input-section .select-tip .percentages input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+main .input-section .select-tip .percentages input::-webkit-input-placeholder {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+}
+
+main .input-section .select-tip .percentages input:-ms-input-placeholder {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+}
+
+main .input-section .select-tip .percentages input::-ms-input-placeholder {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+}
+
+main .input-section .select-tip .percentages input::placeholder {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+}
+
+main .input-section .select-tip .percentages input[value] {
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  color: #00494d;
+}
+
+main .output-section {
+  background: #00494d;
+  width: 70vw;
+  border-radius: 10px;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+main .output-section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .output-section div .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px 0;
+}
+
+main .output-section div .heading h1 {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #c5e4e7;
+}
+
+main .output-section div .heading p {
+  font-size: 14px;
+  color: #7f9c9f;
+  margin-top: -10px;
+}
+
+main .output-section div .price {
+  color: #26c0ab;
+  font-size: 34px;
+  font-weight: 700;
+  overflow: scroll;
+}
+
+main .output-section div .price::-webkit-scrollbar {
+  display: none;
+}
+
+main .output-section button {
+  border: none;
+  outline: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  background: #26c0ab;
+  color: #00494d;
+  border-radius: 5px;
+  padding: 5px 20px;
+  width: 70vw;
+  margin-top: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  header {
+    margin: 70px;
+  }
+  main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0 100px;
+    min-width: 680px;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    padding-bottom: 40px;
+  }
+  main .input-section .bill-section input,
+  main .input-section .people input {
+    max-width: 360px;
+  }
+  main .input-section .bill-section input:hover,
+  main .input-section .people input:hover {
+    -webkit-box-shadow: 0 0 0 3px #26c0ab;
+            box-shadow: 0 0 0 3px #26c0ab;
+  }
+  main .input-section .select-tip .percentages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 400px;
+  }
+  main .input-section .select-tip .percentages button {
+    width: 115px;
+    padding: 7px 20px;
+  }
+  main .input-section .select-tip .percentages button:hover {
+    background: #26c0ab;
+    color: #00494d;
+  }
+  main .input-section .select-tip .percentages input {
+    max-width: 74px;
+    padding: 7px 20px;
+  }
+  main .input-section .select-tip .percentages input:hover {
+    -webkit-box-shadow: 0 0 0 3px #26c0ab;
+            box-shadow: 0 0 0 3px #26c0ab;
+  }
+  main .output-section {
+    max-width: 350px;
+    height: 300px;
+    margin-left: 40px;
+    padding: 40px;
+  }
+  main .output-section div .price {
+    font-size: 45px;
+    max-width: 200px;
+  }
+  main .output-section button {
+    max-width: 300px;
+    -webkit-transform: translate(0, 55px);
+            transform: translate(0, 55px);
+    padding: 5px 0;
+  }
+  main .output-section button:hover {
+    background: #c5e4e7;
+  }
+}
+/*# sourceMappingURL=App.css.map */
