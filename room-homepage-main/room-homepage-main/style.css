@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Spartan', sans-serif;
+  overflow-x: hidden;
+}
+
+body.active {
+  overflow: hidden;
+}
+
+.home {
+  height: 40vh;
+  background-image: url(/images/mobile-image-hero-1.jpg);
+  background-repeat: no-repeat;
+  overflow-X: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.home.animate {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+}
+
+.home .shadow.active {
+  position: fixed;
+  background: black;
+  width: 100%;
+  height: 100vh;
+  opacity: 50%;
+  top: 100px;
+  z-index: 1;
+}
+
+.home .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px 20px;
+}
+
+.home .nav .toggle {
+  cursor: pointer;
+}
+
+.home .nav .logo {
+  width: 100%;
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
+}
+
+.home .nav .nav-links {
+  display: block;
+  opacity: 0;
+}
+
+.home .nav .nav-links a {
+  color: #000;
+  text-decoration: none;
+}
+
+.home .nav.active {
+  display: none;
+}
+
+.home .mobile-nav {
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+  padding: 40px 20px;
+}
+
+.home .mobile-nav .close {
+  cursor: pointer;
+}
+
+.home .mobile-nav .nav-links {
+  display: inline;
+}
+
+.home .mobile-nav .nav-links a {
+  text-decoration: none;
+  color: #000;
+  margin: 0 0 0 20px;
+  font-weight: 700;
+}
+
+.home .mobile-nav .nav-links a:hover {
+  opacity: 50%;
+}
+
+.home .mobile-nav.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.home-text.animate {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translate(100%);
+          transform: translate(100%);
+}
+
+.home-text .home-heading {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.home-text .home-paragraph {
+  padding: 20px 0;
+  line-height: 25px;
+  color: #a1a1a1;
+  font-size: 12px;
+}
+
+.home-text .shop-now {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 0;
+  gap: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0 0 50px 0;
+}
+
+.home-text .shop-now .shop-heading {
+  font-size: 14px;
+  letter-spacing: 10px;
+}
+
+.home-text .shop-now:hover {
+  opacity: 0.5;
+}
+
+.navigation-arrows {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navigation-arrows div > img {
+  background: black;
+  padding: 20px 25px;
+  -webkit-transform: translate(0, -65px);
+          transform: translate(0, -65px);
+  cursor: pointer;
+}
+
+.navigation-arrows div > img:hover {
+  opacity: 0.5;
+}
+
+.about .about-dark,
+.about .about-light {
+  width: 100vw;
+}
+
+.about .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 50px 30px;
+}
+
+.about .text .heading {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.about .text .paragraph {
+  line-height: 25px;
+  color: #a1a1a1;
+  font-size: 12px;
+}
+
+@media (min-width: 376px) {
+  .home {
+    background-image: url(/images/desktop-image-hero-1.jpg);
+  }
+}
+
+@media (min-width: 840px) {
+  .home-section {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .home-section .home {
+    width: 70%;
+    max-width: 800px;
+    height: 500px;
+  }
+  .home-section .home .nav {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 60px 40px;
+    gap: 20px;
+  }
+  .home-section .home .nav .toggle {
+    display: none;
+  }
+  .home-section .home .nav .logo {
+    width: 100%;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  .home-section .home .nav .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 100%;
+    gap: 25px;
+  }
+  .home-section .home .nav .nav-links a {
+    font-size: 14px;
+    color: white;
+  }
+  .home-section .home .nav .nav-links a:first-of-type::after, .home-section .home .nav .nav-links a:nth-of-type(2)::after, .home-section .home .nav .nav-links a:nth-of-type(3)::after, .home-section .home .nav .nav-links a:last-of-type::after {
+    content: '';
+    position: absolute;
+    background: white;
+    width: 0;
+    height: 3px;
+    margin: 25px 0 0 -40px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .home-section .home .nav .nav-links a:first-of-type:hover::after, .home-section .home .nav .nav-links a:nth-of-type(2):hover::after, .home-section .home .nav .nav-links a:nth-of-type(3):hover::after, .home-section .home .nav .nav-links a:last-of-type:hover::after {
+    width: 40px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .home-section .home .nav .nav-links a:nth-of-type(2)::after {
+    margin-left: -35px;
+  }
+  .home-section .home .nav .nav-links a:nth-of-type(2):hover::after {
+    width: 35px;
+  }
+  .home-section .home .nav .nav-links a:nth-of-type(3)::after {
+    margin-left: -42px;
+  }
+  .home-section .home .nav .nav-links a:nth-of-type(3):hover::after {
+    width: 40px;
+  }
+  .home-section .home .nav .nav-links a:last-of-type::after {
+    margin-left: -53px;
+  }
+  .home-section .home .nav .nav-links a:last-of-type:hover::after {
+    width: 53px;
+  }
+  .home-section .home .mobile-nav {
+    display: none;
+  }
+  .home-section .home-text {
+    margin: -50px 0 0 100px;
+    width: 30%;
+    max-width: 800px;
+  }
+  .home-section .home-text .home-heading {
+    margin: 0 0 0 -150px;
+  }
+  .home-section .home-text .home-paragraph {
+    margin: 0 0 0 -150px;
+  }
+  .home-section .home-text .shop-now {
+    gap: 20px;
+    padding: 0;
+    margin: 20px 0 0 -150px;
+  }
+  .home-section .navigation-arrows {
+    -webkit-transform: translate(0, 285px);
+            transform: translate(0, 285px);
+  }
+  .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+  }
+  .about .about-dark,
+  .about .about-light {
+    width: 34vw;
+    height: 100%;
+    max-width: 481px;
+  }
+  .about .text {
+    padding: 50px;
+    max-width: 500px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

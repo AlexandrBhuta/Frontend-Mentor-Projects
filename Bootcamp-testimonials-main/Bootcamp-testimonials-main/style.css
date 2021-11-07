@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  overflow-x: hidden;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .text {
+  z-index: 1;
+  font-weight: 300;
+  max-width: 550px;
+  color: #202046;
+  -webkit-transform: translate(5%, 25%);
+          transform: translate(5%, 25%);
+  font-size: 28px;
+}
+
+.app .text::before {
+  content: '';
+  position: absolute;
+  background-image: url(/images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(90px, -65px);
+          transform: translate(90px, -65px);
+}
+
+.app .text .quote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 40px;
+}
+
+.app .text .id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 20px;
+  padding-top: 40px;
+  font-size: 23px;
+}
+
+.app .text .id .name {
+  font-weight: 700;
+}
+
+.app .text .id .occupation {
+  color: #babacf;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.app .svg-imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translate(-5%, 15%);
+          transform: translate(-5%, 15%);
+}
+
+.app .svg-imgs .avatar {
+  border-radius: 10px;
+  width: 500px;
+  -webkit-box-shadow: 0 50px 100px -50px #202046;
+          box-shadow: 0 50px 100px -50px #202046;
+}
+
+.app .svg-imgs .pattern {
+  position: absolute;
+  z-index: -1;
+  -webkit-transform: translate(10px, -30px);
+          transform: translate(10px, -30px);
+  width: 650px;
+}
+
+.app .svg-imgs .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  gap: 35px;
+  height: 50px;
+  width: 100px;
+  border-radius: 50px;
+  -webkit-transform: translate(-150%, -50%);
+          transform: translate(-150%, -50%);
+}
+
+.app .svg-imgs .navigation .prev,
+.app .svg-imgs .navigation .next {
+  cursor: pointer;
+}
+
+.app .svg-imgs div .curve {
+  position: absolute;
+  -webkit-transform: translate(-150%, -40%);
+          transform: translate(-150%, -40%);
+}
+
+@media (max-width: 900px) {
+  .app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .app .text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    -webkit-transform: translate(0, 120px);
+            transform: translate(0, 120px);
+    font-size: 20px;
+    padding: 0 40px;
+  }
+  .app .text::before {
+    -webkit-transform: translate(0, -65px);
+            transform: translate(0, -65px);
+  }
+  .app .text .id {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    font-size: 18px;
+  }
+  .app .text .id .occupation {
+    font-size: 16px;
+  }
+  .app .svg-imgs {
+    -webkit-transform: translate(0, 15%);
+            transform: translate(0, 15%);
+  }
+  .app .svg-imgs .avatar {
+    width: 75vw;
+  }
+  .app .svg-imgs .pattern {
+    width: 90vw;
+  }
+  .app .svg-imgs .navigation {
+    -webkit-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+  }
+  .app .svg-imgs div .curve {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
