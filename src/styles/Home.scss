@@ -1,0 +1,111 @@
+.Home_page {
+    @include page("../assets/home/background-home-mobile.jpg", 710px);
+    main {
+        @include main();
+        padding: 0 5%;
+        .Home_text {
+            div {
+                span {
+                    font-family: Barlow Condensed;
+                    font-size: 16px;
+                    letter-spacing: 2.7px;
+                    color: #d0d6f9;
+                    text-transform: uppercase;
+                }
+                h1 {
+                    font-family: Bellefair;
+                    font-size: 80px;
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    padding: 30px 0;
+                }
+                P {
+                    font-family: Barlow;
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: #d0d6f9;
+                }
+            }
+            .explore {
+                background: #fff;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                padding: 68px 27.5px 59px 29.5px;
+                margin: 70px auto;
+                p {
+                    font-family: Bellefair;
+                    font-size: 20px;
+                    letter-spacing: 1.25px;
+                    color: #0b0d17;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $smallBreakpoint) {
+    .Home_page {
+        @include page("../assets/home/background-home-tablet.jpg", 1024px);
+        main {
+            margin-top: 100px;
+            .Home_text {
+                div {
+                    width: 444px;
+                    margin: auto;
+                    span {
+                        font-size: 20px;
+                        letter-spacing: 3.375px;
+                    }
+                    h1 {
+                        font-size: 150px;
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 28px;
+                    }
+                }
+                .explore {
+                    width: 242px;
+                    height: 242px;
+                    padding: 103px 48px 102px 46px;
+                    margin-top: 130px;
+                    p {
+                        font-size: 32px;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $largeBreakpoint) {
+    .Home_page {
+        @include page("../assets/home/background-home-desktop.jpg", 900px);
+        main {
+            margin-top: 300px;
+            .Home_text {
+                @include flex(row, space-between);
+                text-align: left;
+                div {
+                    width: 450px;
+                    span {
+                        font-size: 28px;
+                        letter-spacing: 4.725px;
+                    }
+                    p {
+                        font-size: 18px;
+                        line-height: 32px;
+                    }
+                }
+                .explore {
+                    width: 274px;
+                    height: 274px;
+                    padding: 119px 64px 118px 62px;
+                }
+            }
+        }
+    }
+}
