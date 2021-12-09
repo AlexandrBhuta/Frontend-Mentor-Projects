@@ -1,0 +1,205 @@
+.Destination_page {
+    @include page( "../assets/destination/background-destination-mobile.jpg", 850px);
+    main {
+        @include main();
+        .page_indicator {
+            @include pageHeader();
+        }
+        .destination_info {
+            .destination_img {
+                @include Animate();
+                img {
+                    max-width: 170px;
+                    max-height: 170px;
+                    margin: 30px 0;
+                }
+            }
+            .main_info {
+                @include flex(column, center);
+                gap: 30px 0;
+                .destination_nav {
+                    ul {
+                        @include flex(row, space-between);
+                        width: 237.5px;
+                        margin: 0 auto;
+                        li {
+                            list-style: none;
+                            button {
+                                background: none;
+                                border: none;
+                                font-family: Barlow Condensed;
+                                font-size: 14px;
+                                letter-spacing: 2.3625px;
+                                color: #d0d6f9;
+                                text-transform: uppercase;
+                                cursor: pointer;
+                                padding-bottom: 5px;
+                                &:hover {
+                                    box-shadow: 0 3px 0 0 #fff;
+                                }
+                                &.active {
+                                    box-shadow: 0 3px 0 0 #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                .first_info {
+                    @include Animate();
+                    max-width: 327px;
+                    height: 220px;
+                    border-bottom: 1px solid #383b4b;
+                    h1 {
+                        @include mainInfoHeading(56px, 0px);
+                    }
+                    p {
+                        @include mainInfoParagraph();
+                    }
+                }
+                .last_info {
+                    @include Animate();
+                    @include flex(column, center);
+                    gap: 30px;
+                     :first-child {
+                        font-family: Barlow Condensed;
+                        font-size: 14px;
+                        letter-spacing: 2.3625px;
+                        text-transform: uppercase;
+                        color: #d0d6f9;
+                    }
+                     :last-child {
+                        margin-top: 10px;
+                        font-family: Bellefair;
+                        font-size: 28px;
+                        text-transform: uppercase;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $smallBreakpoint) {
+    .Destination_page {
+        @include page( "../assets/destination/background-destination-tablet.jpg", 1024px);
+        main {
+            margin-top: 40px;
+            .page_indicator {
+                text-align: left;
+                margin-left: 5%;
+                P {
+                    font-size: 20px;
+                    letter-spacing: 3.375px;
+                }
+            }
+            .destination_info {
+                .destination_img {
+                    img {
+                        max-width: 3000px;
+                        max-height: 300px;
+                        margin: 50px 0;
+                    }
+                }
+                .main_info {
+                    gap: 50px 0;
+                    .destination_nav {
+                        ul {
+                            width: 285.5px;
+                            li {
+                                button {
+                                    font-size: 16px;
+                                    letter-spacing: 2.7px;
+                                }
+                            }
+                        }
+                    }
+                    .first_info {
+                        max-width: 573px;
+                        padding: 0;
+                        h1 {
+                            @include mainInfoHeading(80px, 0px);
+                        }
+                        p {
+                            font-size: 16px;
+                            max-width: 573px;
+                        }
+                        &::after {
+                            transform: translateY(40px);
+                        }
+                    }
+                    .last_info {
+                        @include flex(row, center);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $largeBreakpoint) {
+    .Destination_page {
+        @include page( "../assets/destination/background-destination-desktop.jpg", 900px);
+        main {
+            text-align: left;
+            padding: 0 5%;
+            margin-top: 100px;
+            .page_indicator {
+                P {
+                    font-size: 28px;
+                    letter-spacing: 4.725px;
+                }
+            }
+            .destination_info {
+                @include flex(row, space-between);
+                gap: 30px;
+                margin-top: 40px;
+                padding: 0 5%;
+                .destination_img {
+                    img {
+                        max-width: 445px;
+                        max-height: 445px;
+                        margin: 50px 0;
+                    }
+                }
+                .main_info {
+                    @include flex(column, flex-start);
+                    gap: 30px;
+                    align-items: flex-start;
+                    .destination_nav {
+                        ul {
+                            li {
+                                button {
+                                    font-size: 16px;
+                                    letter-spacing: 2.7px;
+                                }
+                            }
+                        }
+                    }
+                    .first_info {
+                        padding: 0;
+                        overflow: hidden;
+                        max-width: 444px;
+                        height: 300px;
+                        h1 {
+                            @include mainInfoHeading(100px, 0px);
+                        }
+                        p {
+                            font-size: 18px;
+                            line-height: 32px;
+                        }
+                        &::after {
+                            display: none;
+                            transform: translateY(45px);
+                            max-width: 444px;
+                        }
+                    }
+                    .last_info {
+                        @include flex(row, flex-start);
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}

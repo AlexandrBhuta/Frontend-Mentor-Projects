@@ -1,0 +1,188 @@
+.Crew_page {
+    @include page("../assets/crew/background-crew-mobile.jpg", 710px);
+    main {
+        @include main();
+        .header {
+            @include pageHeader();
+        }
+        img {
+            width: 177.12px;
+            height: 222px;
+            margin: 30px 0;
+            border-bottom: 1px solid #383b4b;
+            @include Animate();
+        }
+        .crew_info {
+            @include flex(column, center);
+            gap: 30px;
+            .crew_nav {
+                ul {
+                    @include flex(row, space-between);
+                    width: 88px;
+                    margin: 0 auto;
+                    li {
+                        list-style: none;
+                        button {
+                            width: 10px;
+                            height: 10px;
+                            border: none;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            background: #ffffff;
+                            mix-blend-mode: normal;
+                            opacity: 0.17;
+                            &:hover {
+                                opacity: 1;
+                            }
+                            &.active {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            .main_info {
+                @include Animate();
+                padding: 0 5%;
+                .header-desktop {
+                    display: none;
+                }
+                span {
+                    font-family: Bellefair;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                    mix-blend-mode: normal;
+                    opacity: 0.5;
+                }
+                h1 {
+                    @include mainInfoHeading(24px, 10px 0 30px 0);
+                }
+                p {
+                    @include mainInfoParagraph();
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $smallBreakpoint) {
+    .Crew_page {
+        @include page("../assets/crew/background-crew-tablet.jpg", 1024px);
+        main {
+            @include flex(column-reverse, center);
+            .header {
+                position: absolute;
+                left: 5%;
+                top: 130px;
+                p {
+                    font-size: 20px;
+                    letter-spacing: 3.375px;
+                    top: 120px;
+                    left: 5%;
+                }
+            }
+            img {
+                width: 456.37px;
+                height: 572px;
+                margin-top: 50px;
+            }
+            .crew_info {
+                @include flex(column-reverse, center);
+                transform: translateY(40px);
+                margin-top: 30px;
+                .main_info {
+                    padding: 0;
+                    span {
+                        font-size: 24px;
+                    }
+                    h1 {
+                        font-size: 40px;
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 28px;
+                        max-width: 458px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $largeBreakpoint) {
+    .Crew_page {
+        @include page("../assets/crew/background-crew-desktop.jpg", 900px);
+        main {
+            @include flex(row-reverse, space-between);
+            text-align: left;
+            gap: 100px;
+            margin-top: 40px;
+            padding: 0 10%;
+            .header {
+                display: none;
+            }
+            img {
+                // width: 568.07px;
+                // height: 721px;
+            }
+            .crew_info {
+                align-items: flex-start;
+                .crew_nav {
+                    ul {
+                        @include flex(row, space-between);
+                        width: 132px;
+                        transform: translateY(80px);
+                        li {
+                            button {
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }
+                    }
+                }
+                .main_info {
+                    .header-desktop {
+                        display: block;
+                        transform: translate(-5%, -150px);
+                        p {
+                            font-family: Barlow Condensed;
+                            font-size: 28px;
+                            letter-spacing: 4.725px;
+                            text-transform: uppercase;
+                            color: #ffffff;
+                            span {
+                                font-family: Barlow Condensed;
+                                opacity: 0.25;
+                                font-size: 28px;
+                                letter-spacing: 4.725px;
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                    span {
+                        font-size: 32px;
+                    }
+                    h1 {
+                        font-size: 56px;
+                        max-width: 340px;
+                        white-space: nowrap;
+                        overflow: scroll;
+                        -ms-overflow-style: none;
+                        scrollbar-width: none;
+                        /* Firefox */
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                    }
+                    p {
+                        font-size: 18px;
+                        line-height: 32px;
+                        //max-width: 444px;
+                        max-width: none;
+                    }
+                }
+            }
+        }
+    }
+}

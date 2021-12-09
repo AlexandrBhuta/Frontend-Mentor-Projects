@@ -1,0 +1,94 @@
+header {
+    nav {
+        @include flex(row, space-between);
+        transform: translateY(40px);
+        padding-left: 5%;
+        max-width: 1440px;
+        margin: 0 auto;
+        ul {
+            @include flex(row, space-between);
+            gap: 30px;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(81.5485px);
+            padding: 0 12% 0 10%;
+            height: 96px;
+            li {
+                list-style: none;
+                a {
+                    span {
+                        margin-right: 15px;
+                    }
+                    padding: 39px 0;
+                    text-decoration: none;
+                    font-family: Barlow Condensed;
+                    font-size: 16px;
+                    letter-spacing: 2.7px;
+                    color: $white;
+                    text-transform: uppercase;
+                    &:hover {
+                        box-shadow: 0 3px 0 0#fff;
+                    }
+                }
+            }
+        }
+        button {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: $largeBreakpoint) {
+    header {
+        nav {
+            transform: translateY(0);
+            ul {
+                li {
+                    a {
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $smallBreakpoint) {
+    header {
+        nav {
+            padding: 20px 5% 0 5%;
+            ul {
+                @include flex(column, flex-start);
+                position: absolute;
+                align-items: flex-start;
+                top: 0;
+                right: 0;
+                width: 70vw;
+                height: 100vh;
+                padding-top: 118px;
+                overflow: hidden;
+                display: none;
+                &.active {
+                    display: flex;
+                }
+                li {
+                    a {
+                        @include flex(row, center);
+                        padding: 0;
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            button {
+                display: block;
+                z-index: 1;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

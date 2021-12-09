@@ -1,0 +1,191 @@
+.Technology_page {
+    @include page("../assets/technology/background-technology-mobile.jpg", 710px);
+    main {
+        @include main();
+        .page_indicator {
+            @include pageHeader();
+        }
+        .technology_info {
+            .technology_img {
+                img {
+                    //width: 375px;
+                    width: 100vw;
+                    height: 170px;
+                    margin: 30px 0;
+                }
+                &.active {
+                    @include Animate();
+                }
+            }
+            .main_info {
+                @include flex(column, center);
+                gap: 30px;
+                &.active {
+                    @include Animate();
+                }
+                .technology_nav {
+                    ul {
+                        @include flex(row, space-between);
+                        width: 152px;
+                        margin: auto;
+                        li {
+                            list-style: none;
+                            button {
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                mix-blend-mode: normal;
+                                border: 1px solid rgba(255, 255, 255, 0.25);
+                                background: none;
+                                color: #fff;
+                                font-family: Bellefair;
+                                font-size: 16px;
+                                cursor: pointer;
+                                &:hover {
+                                    background: #fff;
+                                    color: #0b0d17;
+                                }
+                                &.active {
+                                    background: #fff;
+                                    color: #0b0d17;
+                                }
+                            }
+                        }
+                    }
+                }
+                div {
+                    padding: 0 5%;
+                    span {
+                        font-family: Barlow Condensed;
+                        font-size: 14px;
+                        line-height: 17px;
+                        letter-spacing: 2.3625px;
+                        text-transform: uppercase;
+                        color: #d0d6f9;
+                    }
+                    h1 {
+                        @include mainInfoHeading(24px, 15px 0 30px 0);
+                    }
+                    p {
+                        @include mainInfoParagraph();
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $smallBreakpoint) {
+    .Technology_page {
+        @include page( "../assets/technology/background-technology-tablet.jpg", 1024px);
+        main {
+            @include main();
+            margin-top: 50px;
+            .page_indicator {
+                text-align: left;
+                margin-left: 5%;
+                P {
+                    font-size: 20px;
+                    letter-spacing: 3.375px;
+                }
+            }
+            .technology_info {
+                .technology_img {
+                    img {
+                        //width: 768px;
+                        height: 310px;
+                        margin: 60px 0;
+                    }
+                }
+                .main_info {
+                    gap: 50px;
+                    .technology_nav {
+                        ul {
+                            width: 210px;
+                            li {
+                                button {
+                                    width: 60px;
+                                    height: 60px;
+                                    font-size: 24px;
+                                }
+                            }
+                        }
+                    }
+                    div {
+                        padding: 0;
+                        span {
+                            font-size: 16px;
+                            letter-spacing: 2.7px;
+                        }
+                        h1 {
+                            @include mainInfoHeading(40px, 20px 0 30px 0);
+                        }
+                        p {
+                            font-size: 16px;
+                            line-height: 28px;
+                            max-width: 458px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $largeBreakpoint) {
+    .Technology_page {
+        @include page( "../assets/technology/background-technology-desktop.jpg", 900px);
+        main {
+            @include flex(column, center);
+            align-items: flex-start;
+            text-align: left;
+            margin-top: 100px;
+            .page_indicator {
+                margin-left: 5%;
+                transform: translateY(30px);
+                P {
+                    font-size: 28px;
+                    letter-spacing: 4.725px;
+                }
+            }
+            .technology_info {
+                @include flex(row-reverse, flex-start);
+                gap: 5vw;
+                .technology_img {
+                    img {
+                        width: 40vw;
+                        height: 527px;
+                        max-width: 515px;
+                    }
+                }
+                .main_info {
+                    @include flex(row, flex-start);
+                    gap: 0;
+                    .technology_nav {
+                        ul {
+                            @include flex(column, space-between);
+                            height: 303px;
+                            li {
+                                button {
+                                    width: 80px;
+                                    height: 80px;
+                                    font-size: 32px;
+                                }
+                            }
+                        }
+                    }
+                    div {
+                        h1 {
+                            @include mainInfoHeading(56px, 10px 0 20px 0);
+                        }
+                        p {
+                            font-size: 18px;
+                            line-height: 32px;
+                            max-width: 470px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
