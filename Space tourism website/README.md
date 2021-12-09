@@ -32,8 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://space-tourism-site-gt.netlify.app/]
 
 ## My process
 
@@ -50,21 +49,8 @@ Users should be able to:
 
 One of the major things I learned with this challenge was to use Mixins in SCSS which helped me a lot. They allowed me to not keep repeating myself and write code that is much cleaner, and lot easier to read.
 
-I also used react-router-dom to switch between the different components, and to me that was a new experience and I have found it to very effective rather than it's alternatives, and while on that process I found out that 'Switch' is no longer supported and has been replaced by 'Routes'. I also found out that state is async
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+I also used react-router-dom to switch between the different components, and to me that was a new experience and I have found it to very effective rather than it's alternatives, and while on that process I found out that 'Switch' is no longer supported and has been replaced by 'Routes'.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [https://www.frontendmentor.io/profile/thulanigamtee]
